@@ -4,14 +4,16 @@ using CarRentalManagement.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CarRentalManagement.Server.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221129052600_AddApplicationTables")]
+    partial class AddApplicationTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -155,26 +157,6 @@ namespace CarRentalManagement.Server.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Color");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedBy = "System",
-                            DateCreated = new DateTime(2022, 11, 29, 14, 4, 6, 223, DateTimeKind.Local).AddTicks(8323),
-                            DateUpdated = new DateTime(2022, 11, 29, 14, 4, 6, 224, DateTimeKind.Local).AddTicks(6769),
-                            Name = "Black",
-                            UpdatedBy = "System"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedBy = "System",
-                            DateCreated = new DateTime(2022, 11, 29, 14, 4, 6, 224, DateTimeKind.Local).AddTicks(7435),
-                            DateUpdated = new DateTime(2022, 11, 29, 14, 4, 6, 224, DateTimeKind.Local).AddTicks(7439),
-                            Name = "Blue",
-                            UpdatedBy = "System"
-                        });
                 });
 
             modelBuilder.Entity("CarRentalManagement.Shared.Domain.Customer", b =>
@@ -238,26 +220,6 @@ namespace CarRentalManagement.Server.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Make");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedBy = "System",
-                            DateCreated = new DateTime(2022, 11, 29, 14, 4, 6, 225, DateTimeKind.Local).AddTicks(7628),
-                            DateUpdated = new DateTime(2022, 11, 29, 14, 4, 6, 225, DateTimeKind.Local).AddTicks(7636),
-                            Name = "BMW",
-                            UpdatedBy = "System"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedBy = "System",
-                            DateCreated = new DateTime(2022, 11, 29, 14, 4, 6, 225, DateTimeKind.Local).AddTicks(7639),
-                            DateUpdated = new DateTime(2022, 11, 29, 14, 4, 6, 225, DateTimeKind.Local).AddTicks(7640),
-                            Name = "Toyota",
-                            UpdatedBy = "System"
-                        });
                 });
 
             modelBuilder.Entity("CarRentalManagement.Shared.Domain.Model", b =>
@@ -285,44 +247,6 @@ namespace CarRentalManagement.Server.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Model");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedBy = "System",
-                            DateCreated = new DateTime(2022, 11, 29, 14, 4, 6, 226, DateTimeKind.Local).AddTicks(731),
-                            DateUpdated = new DateTime(2022, 11, 29, 14, 4, 6, 226, DateTimeKind.Local).AddTicks(737),
-                            Name = "3 Series",
-                            UpdatedBy = "System"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedBy = "System",
-                            DateCreated = new DateTime(2022, 11, 29, 14, 4, 6, 226, DateTimeKind.Local).AddTicks(739),
-                            DateUpdated = new DateTime(2022, 11, 29, 14, 4, 6, 226, DateTimeKind.Local).AddTicks(741),
-                            Name = "X5",
-                            UpdatedBy = "System"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedBy = "System",
-                            DateCreated = new DateTime(2022, 11, 29, 14, 4, 6, 226, DateTimeKind.Local).AddTicks(742),
-                            DateUpdated = new DateTime(2022, 11, 29, 14, 4, 6, 226, DateTimeKind.Local).AddTicks(744),
-                            Name = "Prius",
-                            UpdatedBy = "System"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedBy = "System",
-                            DateCreated = new DateTime(2022, 11, 29, 14, 4, 6, 226, DateTimeKind.Local).AddTicks(745),
-                            DateUpdated = new DateTime(2022, 11, 29, 14, 4, 6, 226, DateTimeKind.Local).AddTicks(746),
-                            Name = "Rav4",
-                            UpdatedBy = "System"
-                        });
                 });
 
             modelBuilder.Entity("CarRentalManagement.Shared.Domain.Vehicle", b =>
