@@ -20,7 +20,7 @@ namespace CarRentalManagement.Server.Data
         {
         }
         public DbSet<Vehicle> Vehicles { get; set; }
-        public DbSet<Color> Color { get; set; }
+        public DbSet<Colour> Color { get; set; }
         public DbSet<Make> Make { get; set; }
         public DbSet<Model> Model { get; set; }
         public DbSet<Customer> Customers { get; set; }
@@ -30,7 +30,7 @@ namespace CarRentalManagement.Server.Data
         {
             base.OnModelCreating(builder);
 
-            builder.ApplyConfiguration(new ColorSeedConfiguration());
+            builder.ApplyConfiguration(new ColourSeedConfiguration());
             builder.ApplyConfiguration(new MakeSeedConfiguration());
             builder.ApplyConfiguration(new ModelSeedConfiguration());
         }

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace CarRentalManagement.Server.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]")] 
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
